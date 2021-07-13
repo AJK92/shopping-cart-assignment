@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,600,700');
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Dosis';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

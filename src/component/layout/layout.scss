@@ -1,0 +1,54 @@
+@import "./../../sharedsheet";
+.app {
+  &-navbar {
+    box-shadow: 0 4px 3px -3px darkgrey;
+    height: 100px;
+    width: 100%;
+  }
+  &-navbar-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-block {
+    display: flex;
+  }
+  &-menu-block {
+    display: flex;
+    align-items: flex-end;
+    padding-left: 20px;
+    a {
+      color: $primary-text-color;
+      margin: 10px;
+    }
+    &:nth-child(1) {
+      a {
+        margin-right: 0px;
+      }
+    }
+  }
+  &-cart-wrapper {
+    display: flex;
+    border: none;
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    cursor: pointer;
+    align-items: center;
+    font-family: inherit;
+    span {
+      padding-left: 15px;
+    }
+  }
+  &-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: lightgray;
+    div {
+      padding: 10px 0px;
+    }
+  }
+}

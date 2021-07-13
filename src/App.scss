@@ -1,0 +1,72 @@
+@import "./sharedsheet";
+.container {
+  height: 100%;
+}
+
+.width-wrapper {
+  margin: 0 auto;
+  width: 80%;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h2, p {
+  margin: 0px;
+}
+
+input {
+  font-family: inherit;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid grey;
+  padding: 8px 0px 8px 1px;
+  margin-bottom: 16px;
+  width: 100%;
+  &:focus {
+    border-color: $input-focus-color;
+  }
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #b4005a;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: spin 1s linear infinite; /* Safari */
+  animation: spin 1s linear infinite;
+}
+
+.app-btn {
+  font-family: inherit;
+  text-align: center;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  margin-top: 20px;
+  background-color: $secondary-color;
+  color: white;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

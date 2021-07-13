@@ -1,0 +1,10 @@
+@import "../../sharedsheet";
+.cart {
+  &-wrapper {
+    display: flex;
+    margin: 50px auto;
+  }
+  &-section {
+    width: 50%;
+  }
+}
