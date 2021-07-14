@@ -29,7 +29,7 @@ const AppHeader = () => {
           </div>
           <div>
             <div className="app-menu-block">
-              <Link to="/" itemProp="url">
+              <Link to="/login" itemProp="url">
                 SignIn
               </Link>
               <Link to="/register" itemProp="url">

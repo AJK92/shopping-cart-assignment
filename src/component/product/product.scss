@@ -1,0 +1,52 @@
+@import "../../sharedsheet";
+.app {
+  &-product-wrapper {
+    display: flex;
+  }
+  &-category-container {
+    width: 25%;
+    background-color: lightgray;
+    ul {
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+      li {
+        color: #404040;
+        padding: 8px 16px;
+        border-bottom: 1px solid darkgray;
+        cursor: pointer;
+      }
+    }
+  }
+  &-product-container {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &-product-item-wrapper {
+    width: 21%;
+    margin: 8px;
+    padding: 8px;
+    border-bottom: 1px dashed darkgray;
+  }
+  &-product-item-name {
+    height: 35px;
+    margin: 4px;
+    overflow: hidden;
+  }
+  &-product-item-desc {
+    height: 60px;
+    background-color: lightgray;
+    overflow: hidden;
+    font-size: $f-12;
+    padding: 4px;
+  }
+  &-product-item-buynow {
+      span {
+          font-size: $f-12;
+      }
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}

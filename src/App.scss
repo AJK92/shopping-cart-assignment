@@ -13,7 +13,9 @@ a {
   cursor: pointer;
 }
 
-h2, p {
+h2,
+h5,
+p {
   margin: 0px;
 }
 
@@ -50,6 +52,22 @@ input {
   margin-top: 20px;
   background-color: $secondary-color;
   color: white;
+}
+
+.app-box-shadow {
+  position: relative;
+  &:after {
+    position: absolute;
+    width: 90%;
+    height: 5%;
+    left: 5%;
+    border-radius: 50%;
+    z-index: -1;
+    bottom: 0%;
+    content: "";
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    clip: rect(8px, auto, 40px, auto);
+  }
 }
 
 /* Safari */
