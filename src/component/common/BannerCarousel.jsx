@@ -4,7 +4,6 @@ import "./common.scss";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const BannerCarousel = ({ carousel }) => {
-  console.log("carousel", carousel);
   return (
     <div className="app-carousel app-box-shadow">
       <Carousel

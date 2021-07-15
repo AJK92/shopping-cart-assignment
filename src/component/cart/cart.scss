@@ -1,0 +1,131 @@
+@import "../../sharedsheet";
+
+.app {
+  &-cart-container {
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  &-cart-content {
+    width: 35%;
+    height: 85%;
+    float: right;
+    background: $grey-color;
+    position: relative;
+  }
+  &-cart-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    background: black;
+    color: white;
+    & > div {
+      display: flex;
+      align-items: baseline;
+      span {
+        padding-left: 4px;
+      }
+    }
+  }
+  &-cart-close {
+    font-size: 40px;
+    &:hover,
+    &:focus {
+      color: darkgray;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+  &-cart-item {
+    display: flex;
+    padding: 12px;
+    background: white;
+    margin-bottom: 8px;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      align-self: flex-end;
+      margin-bottom: 2px;
+    }
+  }
+  &-cart-item-wrapper {
+    overflow: auto;
+    height: calc(100vh - 305px);
+    margin-top: 8px;
+  }
+  &-cart-item-detail {
+    width: 50%;
+    & > p {
+      font-size: $f-14;
+      font-weight: 700;
+    }
+  }
+  &-cart-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: $f-12;
+    .quantity-btn {
+      margin-top: 4px;
+      width: 20px;
+      height: 20px;
+      background: $secondary-color;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      color: white;
+    }
+    span:first-of-type {
+      padding: 0px 8px;
+      margin-top: 2px;
+    }
+  }
+  &-cart-lowest-price {
+    display: flex;
+    align-items: center;
+    background: white;
+    margin: 0px 8px;
+    border-radius: 2px;
+    padding: 4px;
+    font-size: $f-12;
+    p {
+      padding-left: 4px;
+    }
+  }
+  &-no-item {
+    height: 100%;
+    text-align: center;
+    p {
+      font-size: $f-12;
+    }
+  }
+  &-cart-footer {
+    background: white;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 8px;
+    div:first-of-type {
+      text-align: center;
+      font-size: $f-12;
+      padding-bottom: 8px;
+    }
+    button {
+      margin: 0px;
+      width: 95%;
+      border-radius: 2px;
+    }
+    .proceed-btn {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

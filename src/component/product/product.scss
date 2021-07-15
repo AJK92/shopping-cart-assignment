@@ -5,7 +5,7 @@
   }
   &-category-container {
     width: 25%;
-    background-color: lightgray;
+    background-color: $grey-color;
     ul {
       list-style: none;
       margin: 0px;
@@ -16,6 +16,10 @@
         border-bottom: 1px solid darkgray;
         cursor: pointer;
       }
+    }
+    .highlight {
+      color: $secondary-color;
+      font-weight: bold;
     }
   }
   &-product-container {
@@ -36,15 +40,15 @@
   }
   &-product-item-desc {
     height: 60px;
-    background-color: lightgray;
+    background-color: $grey-color;
     overflow: hidden;
     font-size: $f-12;
     padding: 4px;
   }
   &-product-item-buynow {
-      span {
-          font-size: $f-12;
-      }
+    span {
+      font-size: $f-12;
+    }
     display: flex;
     justify-content: space-between;
     align-items: baseline;

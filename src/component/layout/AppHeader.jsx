@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Cart from "../cart/Cart";
+import { useSelector } from "react-redux";
 import "./layout.scss";
 
 const AppHeader = () => {
+  const [showCart, setShowCart] = useState(false);
+  const itemCount = useSelector((state) => state.CartReducer.itemCount);
+
+  const onCartClick = () => {
+    setShowCart(!showCart);
+  };
+
   return (
     <header>
       <nav className="app-navbar">
@@ -36,7 +45,7 @@ const AppHeader = () => {
                 Register
               </Link>
             </div>
-            <button className="app-cart-wrapper" onClick={() => {}}>
+            <button className="app-cart-wrapper" onClick={onCartClick}>
               <img
                 src="/static/images/cart.svg"
                 alt="shopping-cart"
@@ -44,8 +53,11 @@ const AppHeader = () => {
                 height="30"
                 loading="lazy"
               />
-              <span>{`0`} Items</span>
+              <span>
+                {itemCount} {itemCount > 1 ? "items" : "item"}
+              </span>
             </button>
+            {(showCart && <Cart onCartClick={onCartClick} />) || null}
           </div>
         </div>
       </nav>
