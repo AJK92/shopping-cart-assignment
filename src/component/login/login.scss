@@ -1,10 +1,23 @@
-.cart {
+.app {
+  &-wrapper {
+    display: flex;
+    margin: 50px auto;
+  }
+  &-section {
+    width: 50%;
+    margin-bottom: 10px;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .app {
     &-wrapper {
-      display: flex;
-      margin: 50px auto;
+      flex-direction: column;
     }
     &-section {
-      width: 50%;
+      width: 100%;
+      margin-bottom: 20px;
     }
   }
-  
+}

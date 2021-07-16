@@ -42,3 +42,17 @@
     margin: 0px auto;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .app {
+    &-btn-wrapper {
+      width: 90%;
+    }
+    &-image-wrapper {
+      width: 45%;
+    }
+    &-content-wrapper {
+      width: 55%;
+    }
+  }
+}

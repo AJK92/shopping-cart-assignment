@@ -1,9 +1,21 @@
-.cart {
+.app {
   &-wrapper {
     display: flex;
     margin: 50px auto;
   }
   &-section {
     width: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .app {
+    &-wrapper {
+      flex-direction: column;
+    }
+    &-section {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
 }

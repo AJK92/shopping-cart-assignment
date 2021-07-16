@@ -14,16 +14,16 @@ const Login = () => {
   const history = useHistory();
 
   const onSubmit = () => {
-    history.push("/");
+    history.push("/product");
   };
 
   return (
-    <div className="cart-wrapper width-wrapper">
-      <div className="cart-section left">
+    <main className="app-wrapper width-wrapper">
+      <div className="app-section">
         <h2 style={{ paddingBottom: "20px" }}>Login</h2>
         <span>Get access to your Orders, Wishlist and Recommendations.</span>
       </div>
-      <div className="cart-section">
+      <div className="app-section">
         <form onSubmit={handleSubmit(onSubmit)}>
           <InputField
             type="text"
@@ -50,7 +50,7 @@ const Login = () => {
           <button className="app-btn">Login</button>
         </form>
       </div>
-    </div>
+    </main>
   );
 };
 

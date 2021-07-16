@@ -15,16 +15,16 @@ const Register = () => {
   const history = useHistory();
 
   const onSubmit = () => {
-    history.push('/');
+    history.push('/login');
   };
 
   return (
-    <div className="cart-wrapper width-wrapper">
-      <div className="cart-section left">
+    <main className="app-wrapper width-wrapper">
+      <div className="app-section left">
         <h2 style={{ paddingBottom: "20px" }}>Signup</h2>
         <span>We do not share your personal details with anyone.</span>
       </div>
-      <div className="cart-section">
+      <div className="app-section">
         <form onSubmit={handleSubmit(onSubmit)}>
           <InputField
             type="text"
@@ -96,7 +96,7 @@ const Register = () => {
           <button className="app-btn">Signup</button>
         </form>
       </div>
-    </div>
+    </main>
   );
 };
 
