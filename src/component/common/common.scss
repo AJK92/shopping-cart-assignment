@@ -45,6 +45,12 @@
 
 @media screen and (max-width: 768px) {
   .app {
+    &-carousel {
+      min-height: 150px;
+      img {
+        height: 175px;
+      }
+    }
     &-btn-wrapper {
       width: 90%;
     }

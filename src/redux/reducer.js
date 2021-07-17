@@ -1,9 +1,15 @@
-import { ADD_CART_ITEM, REMOVE_CART_ITEM, SET_FILTER } from "./actionType";
+import {
+  ADD_CART_ITEM,
+  REGISTER_USER,
+  REMOVE_CART_ITEM,
+  SET_FILTER,
+} from "./actionType";
 
 const initialState = {
   itemCount: 0,
   cart: [],
-  filter: null
+  filter: null,
+  registeredUsers: []
 };
 
 export default (state = initialState, action) => {
@@ -62,6 +68,12 @@ export default (state = initialState, action) => {
         ...state,
         filter: action.payload,
       };
+    case REGISTER_USER:
+      return {
+        ...state,
+        registeredUsers: [...state.registeredUsers, action.payload],
+      };
+
     default:
       return state;
   }

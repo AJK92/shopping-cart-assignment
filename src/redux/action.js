@@ -1,4 +1,9 @@
-import { ADD_CART_ITEM, REMOVE_CART_ITEM, SET_FILTER } from "./actionType";
+import {
+  ADD_CART_ITEM,
+  REGISTER_USER,
+  REMOVE_CART_ITEM,
+  SET_FILTER,
+} from "./actionType";
 
 export const addToCart = (payload) => ({
   type: ADD_CART_ITEM,
@@ -15,3 +20,7 @@ export const setFilter = (payload) => ({
   payload,
 });
 
+export const registerUser = (payload) => ({
+  type: REGISTER_USER,
+  payload,
+});

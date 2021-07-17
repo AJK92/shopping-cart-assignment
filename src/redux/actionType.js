@@ -1,3 +1,4 @@
 export const ADD_CART_ITEM = "ADD_CART_ITEM";
 export const REMOVE_CART_ITEM = "REMOVE_CART_ITEM";
 export const SET_FILTER = "SET_FILTER";
+export const REGISTER_USER = "REGISTER_USER";

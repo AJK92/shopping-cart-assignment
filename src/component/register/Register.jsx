@@ -2,7 +2,9 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import InputField from "../common/InputField";
 import { useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import "./register.scss";
+import { registerUser } from "../../redux/action";
 
 const Register = () => {
   const {
@@ -13,9 +15,11 @@ const Register = () => {
   } = useForm();
 
   const history = useHistory();
+  const dispatch = useDispatch();
 
-  const onSubmit = () => {
-    history.push('/login');
+  const onSubmit = (userData) => {
+    dispatch(registerUser(userData));
+    history.push("/login");
   };
 
   return (
@@ -55,8 +59,7 @@ const Register = () => {
             register={register}
             rules={{
               pattern: {
-                value:
-                  /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/i,
+                value: /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/i,
                 message: "Not a valid email.",
               },
             }}
@@ -90,7 +93,8 @@ const Register = () => {
             error={errors}
             isRequired={true}
             rules={{
-                validate: value => value === watch('password') || "The passwords do not match."
+              validate: (value) =>
+                value === watch("password") || "The passwords do not match.",
             }}
           />
           <button className="app-btn">Signup</button>

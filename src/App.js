@@ -16,7 +16,7 @@ function App() {
       <Router>
         <div className="container">
           <AppHeader />
-          <Suspense fallback={<div className="loader"></div>}>
+          <Suspense fallback={<div className="loader-wrapper"><div className="loader"></div></div>}>
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/register" component={Register} />

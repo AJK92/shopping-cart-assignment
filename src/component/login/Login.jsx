@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import InputField from "../common/InputField";
 import { useHistory } from "react-router-dom";
+import { useSelector } from "react-redux";
 import "./login.scss";
 
 const Login = () => {
@@ -12,9 +13,24 @@ const Login = () => {
   } = useForm();
 
   const history = useHistory();
+  const registeredUser = useSelector(
+    (state) => state.CartReducer.registeredUsers
+  );
 
-  const onSubmit = () => {
-    history.push("/product");
+  const onSubmit = (loginUser) => {
+    const isRegistered =
+      registeredUser.filter(
+        (regUser) => regUser.emailId === loginUser.emailId
+      ) || [];
+    if (isRegistered.length) {
+      if (isRegistered[0].password == loginUser.password) {
+        history.push("/product");
+      } else {
+        alert("Username or Password is wrong.");
+      }
+    } else {
+      alert("Couldnot find the user in the system. Please Signup.");
+    }
   };
 
   return (
@@ -27,7 +43,7 @@ const Login = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <InputField
             type="text"
-            name="email"
+            name="emailId"
             label="Email"
             register={register}
             rules={{

@@ -30,10 +30,20 @@ const Product = () => {
       }
     );
   }, []);
+
+  const onCategoryChange = (e) => {
+    if (e.target.value === "All") {
+      dispatch(setFilter(null));
+    } else {
+      dispatch(setFilter(JSON.parse(e.target.value)));
+    }
+  };
+
   let filteredProducts = [...products];
   if (filter) {
     filteredProducts = products.filter((item) => item.category === filter.id);
   }
+
   return (
     <main className="app-product-wrapper width-wrapper">
       <aside className="app-category-container">
@@ -58,12 +68,29 @@ const Product = () => {
           )}
         </ul>
       </aside>
+      <div className="app-mobile-category">
+        <select
+          name="category"
+          id="category"
+          className="select-option"
+          onChange={onCategoryChange}
+        >
+          <option value="All" key="All">
+            All
+          </option>
+          {categories.map(
+            (item) =>
+              item.enabled && (
+                <option style={{padding: '10px'}} value={JSON.stringify(item)} key={item.id}>
+                  {item.name}
+                </option>
+              )
+          )}
+        </select>
+      </div>
       <section className="app-product-container">
         {filteredProducts.map((product) => {
-          if (filter && filter.id === product.category) {
-            return <ProductItem product={product} />;
-          }
-          return <ProductItem product={product} />;
+          return <ProductItem product={product} key={product.id}/>;
         })}
       </section>
     </main>

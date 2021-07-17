@@ -4,7 +4,7 @@ import "./layout.scss";
 const Footer = () => {
   return (
     <footer className="app-footer">
-      <div className="width-wrapper"><span >Copyright © 2011-2020 Sabka Bazaar Grocery Supplies PVT LTD</span></div>
+      <div className="width-wrapper"><span >Copyright © 2011-2021 Sabka Bazaar Grocery Supplies Pvt Ltd</span></div>
     </footer>
   );
 };

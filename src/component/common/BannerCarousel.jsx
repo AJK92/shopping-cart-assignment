@@ -19,7 +19,7 @@ const BannerCarousel = ({ carousel }) => {
               alt={data.bannerImageAlt}
               loading="lazy"
               width="100%"
-              height="250"
+              height="260"
             />
           </div>
         ))}
