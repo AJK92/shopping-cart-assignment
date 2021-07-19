@@ -74,6 +74,7 @@ const Product = () => {
           id="category"
           className="select-option"
           onChange={onCategoryChange}
+          value={filter?.id ? JSON.stringify(filter) : 'All'}
         >
           <option value="All" key="All">
             All
@@ -81,7 +82,11 @@ const Product = () => {
           {categories.map(
             (item) =>
               item.enabled && (
-                <option style={{padding: '10px'}} value={JSON.stringify(item)} key={item.id}>
+                <option
+                  style={{ padding: "10px" }}
+                  value={JSON.stringify(item)}
+                  key={item.id}
+                >
                   {item.name}
                 </option>
               )
@@ -90,7 +95,7 @@ const Product = () => {
       </div>
       <section className="app-product-container">
         {filteredProducts.map((product) => {
-          return <ProductItem product={product} key={product.id}/>;
+          return <ProductItem product={product} key={product.id} />;
         })}
       </section>
     </main>

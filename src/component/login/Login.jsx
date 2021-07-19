@@ -23,13 +23,15 @@ const Login = () => {
         (regUser) => regUser.emailId === loginUser.emailId
       ) || [];
     if (isRegistered.length) {
-      if (isRegistered[0].password == loginUser.password) {
+      if (isRegistered[0].password === loginUser.password) {
         history.push("/product");
       } else {
-        alert("Username or Password is wrong.");
+        alert("Invalid Username or Password.");
       }
     } else {
-      alert("Couldnot find the user in the system. Please Signup.");
+      alert(
+        "Could not find the user in the system. Please register before logging in."
+      );
     }
   };
 

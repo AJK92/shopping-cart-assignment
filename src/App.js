@@ -18,7 +18,7 @@ function App() {
           <AppHeader />
           <Suspense fallback={<div className="loader-wrapper"><div className="loader"></div></div>}>
             <Switch>
-              <Route exact path="/" component={Home} />
+              <Route exact path={["/", "/home"]} component={Home} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/product" component={Product} />
